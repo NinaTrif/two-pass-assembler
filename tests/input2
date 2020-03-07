@@ -1,0 +1,20 @@
+.global a
+.text
+	mov r1, c
+	mov r2, 1
+	mov r3, pocetak
+	sub r3, 4
+	cmp r1, 1
+	jz dalje
+loop:	mul r2, r3[4]
+	add r3, 4
+	sub r1, 1
+	cmp r1, 1
+	jnz loop
+dalje:	mov r4, r1
+
+.data
+pocetak:	.long 1, 2, 3, 4, 5
+kraj:
+c:	.long kraj-pocetak
+.end

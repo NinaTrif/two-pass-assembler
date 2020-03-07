@@ -1,0 +1,33 @@
+.global a, b
+
+.bss	.skip 4
+
+.text
+pp:	push r1
+	push r2
+	mov r0, 1
+	pop r2
+	pop r1
+	ret
+
+start:	mov r1, a
+	mov r2, &b
+	mov r3, &a
+	mov r4, b
+	cmp r2, 1
+	jz $lab
+	shl r2, 2
+	jmp $dalje
+lab:	shl r2, 1
+dalje:	push r0
+	call pp
+	jmp $e
+
+.data
+b:	.word 1
+e:
+
+.end
+
+.rodata
+f:	.long 5

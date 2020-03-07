@@ -1,0 +1,28 @@
+#symbol table
+#Index         Name           Section        Value          Global?        Size           Attr           
+0                             UND            0x0000         L              
+1              .bss           bss            0x0000         L              0x0000         RW-            
+2              .text          text           0x0000         L              0x003c         R-E            
+3              pp             text           0x0000         L              
+4              start          text           0x000e         L              
+5              lab            text           0x002e         L              
+6              dalje          text           0x0032         L              
+7              .data          data           0x003c         L              0x0002         RW-            
+8              b              data           0x003c         G              
+9              e              data           0x003e         L              
+10             a              UND            0x0000         G              
+#.rel.text
+#Offset        Type           Value          
+0x0010         R_386_16       10             
+0x0014         R_386_16       8              
+0x0018         R_386_16       10             
+0x001c         R_386_16       8              
+0x0036         R_386_16       2              
+0x003a         R_386_PC16     7              
+#.text
+09 e4 0a e4 00 f5 01 00 40 e9 20 e9 e0 e9 30 f5 
+00 00 40 f5 00 00 60 f5 00 00 90 f5 00 00 40 d1 
+01 00 e0 01 08 00 40 f9 02 00 e0 c1 04 00 40 f9 
+01 00 08 e4 00 ec 00 00 e0 c1 3c 00 
+#.data
+01 00 

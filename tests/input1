@@ -1,0 +1,21 @@
+.data
+a:	.long 1, 2, 3
+b:	.char 4, 5
+	.align 4
+c:	.word 6, 7
+
+.text
+	add r1, r1
+	sub r1, &a
+	mul r1, a
+	div r1, r2[5]
+	cmp r1, r2[c]
+	and r1, 1
+	or r1, 0xff
+	not r2, r1
+	test r1, 1
+	mov r1, *20
+	shl r1, 2
+	shr r1, 0b01
+
+.end

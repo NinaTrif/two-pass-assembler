@@ -1,0 +1,23 @@
+.global a, b, c
+
+.text
+	jz $a
+	jz $e
+	jz $b
+	jz $d
+d:	.long d
+	mov r0, b
+	mov c, r0
+	mov r0, e
+
+.data
+	.skip 8
+e:	.long a-e+d
+	.long c
+	.long .bss
+a:	.long b
+
+.bss
+c:	.skip 8
+
+.end
